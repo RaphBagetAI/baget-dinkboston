@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DinkBoston | Pickleball Coaching Marketplace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --court-lime: #c2ff07;
+      --harbor-navy: #002244;
+      --beacon-brick: #a31621;
+      --slate-wash: #f8fafc;
+      --ink: #0f172a;
+      --font-heading: 'Barlow Condensed', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background: var(--slate-wash);
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a {
+      color: var(--court-lime);
+      text-decoration: none;
+    }
+    header {
+      background: var(--harbor-navy);
+      padding: 1rem 2rem;
+      color: var(--court-lime);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+      border-bottom: 3px solid var(--court-lime);
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+    .hero {
+      background: url('images/a-high-action-wide-shot-of-private-pic.png') no-repeat center/cover;
+      border-radius: 12px;
+      color: var(--slate-wash);
+      padding: 5rem 2rem 6rem;
+      text-align: center;
+      box-shadow: inset 0 0 60px rgba(0,0,0,0.5);
+      margin-bottom: 3rem;
+    }
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+    .btn-primary {
+      background-color: var(--court-lime);
+      color: var(--harbor-navy);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.125rem;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.15s ease-in-out;
+      box-shadow: 0 6px 10px -4px rgba(194,255,7,0.75);
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      transform: translateY(-2px);
+      outline: none;
+      box-shadow: 0 10px 15px -5px rgba(194,255,7,0.9);
+    }
+    section {
+      margin-bottom: 3rem;
+      padding: 1rem 2rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    h2 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--harbor-navy);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--court-lime);
+      padding-bottom: 0.25rem;
+      letter-spacing: 0.05em;
+    }
+    p.lead {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      color: var(--ink);
+    }
+    ul.features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap: 1.5rem;
+    }
+    ul.features li {
+      background: var(--slate-wash);
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+      font-family: var(--font-body);
+      font-weight: 600;
+      color: var(--harbor-navy);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    ul.features li strong {
+      font-size: 1rem;
+      margin-bottom: 0.375rem;
+      color: var(--court-lime);
+    }
+    footer {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+      gap: 1rem;
+    }
+    input[type="email"], input[type="text"] {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: var(--font-body);
+      transition: border-color 0.2s ease-in-out;
+    }
+    input[type="email"]:focus, input[type="text"]:focus {
+      border-color: var(--harbor-navy);
+      outline: none;
+      box-shadow: 0 0 0 2px var(--harbor-navy);
+    }
+    .form-submit {
+      background-color: var(--court-lime);
+      color: var(--harbor-navy);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.125rem;
+      padding: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 6px 10px -4px rgba(194,255,7,0.75);
+      transition: background-color 0.2s ease-in-out, transform 0.15s ease-in-out;
+    }
+    .form-submit:hover, .form-submit:focus {
+      background-color: #b0d700;
+      outline: none;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -5px rgba(176,215,0,0.9);
+    }
+    .thank-you-message {
+      color: var(--harbor-navy);
+      font-weight: 600;
+      font-size: 1.125rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>DinkBoston</header>
+
+  <main>
+    <section class="hero" role="banner">
+      <h1>Private Pickleball Coaching<br/>in Greater Boston</h1>
+      <p>Pairing elite private coaches with rec-league players for hourly drills and skill growth.</p>
+      <a href="#waitlist" class="btn-primary">Join the Coach Waitlist</a>
+    </section>
+
+    <section aria-labelledby="about-heading">
+      <h2 id="about-heading">Why DinkBoston?</h2>
+      <p class="lead">We solve the biggest hurdles for Boston pickleball players and coaches by offering a trusted, vetted marketplace with court guarantees and flexible hourly booking.</p>
+      <ul class="features">
+        <li><strong>Vetted Coaches</strong> All coaches vetted for 4.0+ DUPR rating and teaching expertise.</li>
+        <li><strong>Legal Court Access</strong> Guaranteed access to Dink-approved courts with legal coaching permission.</li>
+        <li><strong>Real-Time Booking</strong> Hassle-free booking and payment system on the go.</li>
+        <li><strong>Local Focus</strong> Targeted by Boston neighborhoods like Southie, Cambridge, Back Bay, and more.</li>
+      </ul>
+    </section>
+
+    <section id="waitlist" aria-labelledby="waitlist-heading">
+      <h2 id="waitlist-heading">Join the Coach Waitlist</h2>
+      <form id="waitlist-form" aria-label="Coach waitlist signup form">
+        <input type="text" name="name" placeholder="Your full name" required aria-required="true" />
+        <input type="email" name="email" placeholder="Your email address" required aria-required="true" />
+        <input type="text" name="source" placeholder="How did you hear about us?" aria-describedby="source-desc" />
+        <button type="submit" class="form-submit">Sign Up Now</button>
+      </form>
+      <div id="form-response" role="alert" aria-live="polite" class="thank-you-message" style="display:none"></div>
+    </section>
+  </main>
+
+  <footer>&copy; 2026 DinkBoston. All rights reserved.</footer>
+
+  <script>
+    const form = document.getElementById('waitlist-form');
+    const responseDiv = document.getElementById('form-response');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      responseDiv.style.display = 'none';
+      const formData = new FormData(form);
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        source: formData.get('source') || '',
+      };
+
+      try {
+        const res = await fetch('https://app.baget.ai/api/public/databases/687b29c3-ff38-46b2-b8ec-c9c9cb31b091/rows', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ data }),
+        });
+        if (res.ok) {
+          form.reset();
+          responseDiv.textContent = 'Thanks — we\'ll be in touch soon!';
+          responseDiv.style.color = 'var(--harbor-navy)';
+          responseDiv.style.display = 'block';
+        } else {
+          throw new Error('Failed to submit');
+        }
+      } catch (error) {
+        responseDiv.textContent = 'Oops, something went wrong. Please try again.';
+        responseDiv.style.color = 'var(--beacon-brick)';
+        responseDiv.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
