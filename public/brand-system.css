@@ -1,0 +1,317 @@
+/* Brand System CSS for DinkBoston */
+
+:root {
+  /* Color Palette */
+  --color-primary-forest-green: #1B4332;
+  --color-accent-warm-amber: #D4A853;
+  --color-text-charcoal: #2D3436;
+  --color-background-light-stone: #F5F1EB;
+  --color-button-background: var(--color-primary-forest-green);
+  --color-button-text: #FFFFFF;
+
+  /* Typography */
+  --font-heading: 'Fraunces', serif;
+  --font-body: 'Open Sans', sans-serif;
+
+  --border-radius: 8px;
+  --shadow-natural: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  color: var(--color-text-charcoal);
+  background-color: var(--color-background-light-stone);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  color: var(--color-primary-forest-green);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+h1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+h2 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.3;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--color-text-charcoal);
+}
+
+a {
+  color: var(--color-accent-warm-amber);
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+button {
+  font-family: var(--font-heading);
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary-forest-green);
+  color: var(--color-button-text);
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-natural);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1rem;
+}
+
+button:hover, button:focus {
+  outline: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(27, 67, 50, 0.35);
+}
+
+.container {
+  max-width: 960px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+.background-section-light {
+  background-color: #FFFFFF;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-gap-medium {
+  gap: 2rem;
+}
+
+input, select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--color-text-charcoal);
+  transition: border-color 0.2s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--color-primary-forest-green);
+  box-shadow: 0 0 0 2px var(--color-primary-forest-green);
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: var(--color-primary-forest-green);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.error-message {
+  color: #D34A3A;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.notice-message {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-primary-forest-green);
+}
+
+.primary-cta {
+  background-color: var(--color-accent-warm-amber);
+  color: var(--color-text-charcoal);
+  font-weight: 700;
+  border-radius: var(--border-radius);
+  padding: 1rem 2rem;
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  text-align: center;
+  border: none;
+  box-shadow: var(--shadow-natural);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.primary-cta:hover, .primary-cta:focus {
+  background-color: #b38f30;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .hero-title {
+    font-size: 3.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.header {
+  background-color: var(--color-primary-forest-green);
+  padding: 1rem 0;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header a {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1.5rem 1rem;
+  color: var(--color-text-charcoal);
+  background-color: var(--color-background-light-stone);
+  border-top: 1px solid #ddd;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-natural);
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(27, 67, 50, 0.15);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-primary-forest-green);
+}
+
+.card-text {
+  color: var(--color-text-charcoal);
+  font-size: 1rem;
+}
+
+.link-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: var(--color-accent-warm-amber);
+  color: var(--color-text-charcoal);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: var(--font-heading);
+  box-shadow: var(--shadow-natural);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.link-button:hover, .link-button:focus {
+  background-color: #b38f30;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* Layout Utilities */
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+.space-y-8 > * + * {
+  margin-top: 2rem;
+}
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #666666;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Responsive Form Layout */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  .form-row {
+    flex-direction: row;
+  }
+  .form-row > * {
+    flex: 1 1 0%;
+  }
+}
